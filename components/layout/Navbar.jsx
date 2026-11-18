@@ -83,7 +83,7 @@ export default function Navbar() {
           <Link href="/" className="flex-shrink-0">
             <div className="flex flex-col items-start">
               <Image
-                src="/images/Thundernexlogo.png"
+                src="/Images/Thundernexlogo.png"
                 alt="THUNDERNEX Logo"
                 width={180}
                 height={60}
@@ -104,8 +104,8 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   className={`relative px-3.5 py-2 text-sm font-medium transition-colors group ${active
-                      ? "text-amber-400 font-semibold"
-                      : "text-gray-200 hover:text-amber-400"
+                    ? "text-amber-400 font-semibold"
+                    : "text-gray-200 hover:text-amber-400"
                     }`}
                 >
                   <span className="flex items-center gap-1">
@@ -213,8 +213,8 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 className={`flex items-center justify-between rounded-lg px-3.5 py-2.5 text-sm transition-all duration-200 ${active
-                    ? "bg-amber-500/15 text-amber-400 font-semibold border-l-4 border-amber-500"
-                    : "text-gray-200 hover:bg-white/10 hover:text-amber-400 border-l-4 border-transparent"
+                  ? "bg-amber-500/15 text-amber-400 font-semibold border-l-4 border-amber-500"
+                  : "text-gray-200 hover:bg-white/10 hover:text-amber-400 border-l-4 border-transparent"
                   }`}
                 onClick={() => setMobileOpen(false)}
               >
