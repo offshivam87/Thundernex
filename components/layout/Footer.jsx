@@ -164,7 +164,7 @@ export default function Footer() {
                   />
                 </svg>
                 <a
-                  href="mailto:sales@thundernex.com"
+                  href="mailto:info@thundernex.com"
                   className="hover:text-amber-400 transition-colors duration-200 break-all"
                 >
                   info@thundernex.com
