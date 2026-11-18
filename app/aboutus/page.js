@@ -7,10 +7,24 @@ import CertificationStrip from "@/components/Sections/Home/CertificationStrip";
 
 /* ─────────────────────────── Animated Icons ─────────────────────────── */
 
+export const metadata = {
+    title: 'About Us | Thundernex - ESE Lightning Protection Brand',
+    description: 'Learn about Thundernex, a specialized lightning protection brand of RB Earthing Private Limited, delivering reliable ESE Lightning Arresters and digital strike counters.',
+    keywords: 'About Thundernex, RB Earthing Private Limited, ESE Lightning Arrester Brand, Lightning Protection Solutions India',
+    openGraph: {
+        title: 'About Us | Thundernex - ESE Lightning Protection Brand',
+        description: 'Discover Thundernex by RB Earthing Private Limited – engineering safe infrastructure through reliable ESE lightning protection and monitoring solutions.',
+        url: 'https://www.thundernex.com/aboutus',
+        siteName: 'Thundernex',
+        locale: 'en_US',
+        type: 'website',
+    },
+}
+
 function AnimatedVisionIcon() {
     return (
-        <div className="relative w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center flex-shrink-0">
-            <span className="absolute inset-0 rounded-2xl bg-amber-500/20 animate-ping opacity-20" />
+        <div className="relative w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:bg-amber-500/20 group-hover:border-amber-500/40">
+            <span className="absolute inset-0 rounded-2xl bg-amber-500/20 animate-ping opacity-25" />
             <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8 text-amber-500" aria-hidden="true">
                 <path d="M6 24C10.5 14 17 9 24 9C31 9 37.5 14 42 24C37.5 34 31 39 24 39C17 39 10.5 34 6 24Z" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                 <circle cx="24" cy="24" r="8" stroke="currentColor" strokeWidth="2" className="animate-[spin_12s_linear_infinite]" strokeDasharray="4 2" />
@@ -23,8 +37,8 @@ function AnimatedVisionIcon() {
 
 function AnimatedMissionIcon() {
     return (
-        <div className="relative w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center flex-shrink-0">
-            <span className="absolute inset-0 rounded-2xl bg-amber-500/20 animate-ping opacity-20 [animation-delay:1s]" />
+        <div className="relative w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:bg-amber-500/20 group-hover:border-amber-500/40">
+            <span className="absolute inset-0 rounded-2xl bg-amber-500/20 animate-ping opacity-25 [animation-delay:1s]" />
             <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8 text-amber-500" aria-hidden="true">
                 <circle cx="24" cy="24" r="17" stroke="currentColor" strokeWidth="2.5" strokeDasharray="5 3" className="animate-[spin_16s_linear_infinite] origin-center" />
                 <circle cx="24" cy="24" r="11" stroke="currentColor" strokeWidth="1.8" />
@@ -37,7 +51,7 @@ function AnimatedMissionIcon() {
 
 function AnimatedShieldIcon() {
     return (
-        <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+        <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-white group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-amber-500/25 transition-all duration-300">
             <svg className="w-7 h-7 animate-[bounce_3s_ease-in-out_infinite]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 <path strokeLinecap="round" strokeLinejoin="round" d="m9 12 2 2 4-4" />
@@ -48,7 +62,7 @@ function AnimatedShieldIcon() {
 
 function AnimatedGearIcon() {
     return (
-        <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+        <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-white group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-amber-500/25 transition-all duration-300">
             <svg className="w-7 h-7 animate-[spin_10s_linear_infinite]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                 <circle cx="12" cy="12" r="3" />
@@ -59,7 +73,7 @@ function AnimatedGearIcon() {
 
 function AnimatedAwardIcon() {
     return (
-        <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+        <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-white group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-amber-500/25 transition-all duration-300">
             <svg className="w-7 h-7 animate-[pulse_2s_ease-in-out_infinite]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <circle cx="12" cy="8" r="6" />
                 <path strokeLinecap="round" strokeLinejoin="round" d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.735.508l-4.257-2.5-4.257 2.5a.5.5 0 0 1-.735-.508l1.515-8.526" />
@@ -70,7 +84,7 @@ function AnimatedAwardIcon() {
 
 function AnimatedBoltIcon() {
     return (
-        <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+        <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-white group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-amber-500/25 transition-all duration-300">
             <svg className="w-7 h-7 animate-[bounce_2.5s_ease-in-out_infinite]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
             </svg>
@@ -80,20 +94,16 @@ function AnimatedBoltIcon() {
 
 /* ─────────────────────────── Metadata ─────────────────────────── */
 
-export const metadata = {
-    title: "About Us | THUNDERNEX — Lightning Protection Solutions",
-    description:
-        "Learn about THUNDERNEX, a specialized lightning protection brand from RB Earthing Private Limited delivering high-performance, tested and reliable ESE lightning arrester and strike counter solutions.",
-};
 
 /* ─────────────────────────── Page ─────────────────────────── */
 
 export default function AboutUsPage() {
     return (
-        <div className="min-h-screen flex flex-col bg-white">
-            <Navbar />
+        <div className="min-h-screen flex flex-col bg-white w-full max-w-full overflow-x-hidden">
+            {/* Reverse-Scroll Reveal Navbar */}
 
-            <main className="flex-grow">
+
+            <main className="flex-grow w-full max-w-full overflow-x-hidden">
 
                 {/* ══════════════════════════════════════════════
                     1. PAGE HEADER — dark navy + breadcrumb
@@ -101,39 +111,47 @@ export default function AboutUsPage() {
                 <section className="relative w-full bg-[#051326] pt-28 pb-16 sm:pt-36 sm:pb-20 overflow-hidden">
 
                     {/* Subtle diagonal grid overlay */}
+                    <div
+                        aria-hidden="true"
+                        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+                        style={{
+                            backgroundImage:
+                                "repeating-linear-gradient(45deg,#f59e0b 0,#f59e0b 1px,transparent 0,transparent 50%)",
+                            backgroundSize: "32px 32px",
+                        }}
+                    />
 
                     {/* Amber glow blobs */}
+                    <div aria-hidden="true" className="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-amber-500/10 blur-3xl pointer-events-none animate-hero-glow" />
+                    <div aria-hidden="true" className="absolute -bottom-16 right-10 w-64 h-64 rounded-full bg-amber-500/8 blur-2xl pointer-events-none" />
 
                     <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                         {/* Breadcrumb */}
-                        <nav aria-label="breadcrumb" className="flex items-center gap-2 text-xs text-slate-400 mb-5 uppercase tracking-widest font-medium">
-                            <Link href="/" className="hover:text-amber-400 transition-colors">Home</Link>
-                            <svg className="w-3 h-3 text-slate-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6" /></svg>
+                        <nav aria-label="breadcrumb" className="animate-hero-badge flex items-center gap-2 text-xs text-slate-400 mb-5 uppercase tracking-widest font-medium">
+                            <Link href="/" className="hover:text-amber-400 transition-colors duration-200">Home</Link>
+                            <svg className="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6" /></svg>
                             <span className="text-amber-400">About Us</span>
                         </nav>
 
                         {/* Heading */}
-                        <div className="flex items-center gap-3 mb-4">
-                            <span className="w-8 h-[3px] bg-amber-500 rounded-full" />
+                        <div className="animate-hero-badge flex items-center gap-3 mb-4">
+
                             <span className="text-xs font-bold tracking-widest text-amber-500 uppercase">Our Story</span>
                         </div>
-                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight max-w-3xl">
+                        <h1 className="animate-hero-title text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight max-w-3xl">
                             Powering a Safer Tomorrow<br className="hidden sm:block" />
-                            <span className="text-amber-400"> Through Engineering Excellence</span>
+                            <span className="bg-gradient-to-r from-amber-400 via-amber-200 to-amber-500 bg-clip-text text-transparent animate-text-shimmer drop-shadow-[0_0_35px_rgba(245,158,11,0.35)] font-extrabold inline-block">
+                                {" "}Through Engineering Excellence
+                            </span>
                         </h1>
-                        <p className="mt-5 text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
+                        <p className="animate-hero-desc mt-5 text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
                             THUNDERNEX is a premium lightning protection brand by RB Earthing Private Limited — offering advanced,
                             tested and reliable lightning arresters and monitoring solutions for industrial, commercial and
                             critical infrastructure applications.
                         </p>
                     </div>
                 </section>
-
-                {/* ══════════════════════════════════════════════
-                    2. STATS BANNER — amber accent strip
-                ══════════════════════════════════════════════ */}
-
 
                 {/* ══════════════════════════════════════════════
                     3. BRAND STORY + VISION / MISSION
@@ -145,13 +163,15 @@ export default function AboutUsPage() {
                             {/* Left — brand copy */}
                             <div className="lg:col-span-7 flex flex-col">
                                 <div className="flex items-center gap-2 text-xs sm:text-sm font-bold tracking-widest text-amber-500 uppercase">
-                                    <span className="w-6 h-[2px] bg-amber-500 rounded-full" />
+
                                     <span>About THUNDERNEX</span>
                                 </div>
 
                                 <h2 className="mt-4 text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-[#0a192f] leading-snug">
                                     A Trusted Brand by<br />
-                                    <span className="text-amber-500">RB Earthing Private Limited</span>
+                                    <span className="bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 bg-clip-text text-transparent inline-block">
+                                        RB Earthing Private Limited
+                                    </span>
                                 </h2>
 
                                 <p className="mt-5 text-sm sm:text-base text-slate-600 leading-relaxed">
@@ -168,22 +188,25 @@ export default function AboutUsPage() {
                                 </p>
 
                                 {/* Logo badge */}
-                                <div className="mt-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-slate-50 to-white border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center gap-5 max-w-xl group hover:shadow-md transition-shadow">
-                                    <div className="relative w-40 h-16 flex-shrink-0 bg-white rounded-xl border border-slate-100 shadow-sm p-2">
+                                <div className="mt-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-slate-50 via-white to-slate-50 border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center gap-5 max-w-xl group hover:shadow-xl hover:border-amber-300 transition-all duration-300 hover:-translate-y-1">
+                                    <div className="relative w-40 h-16 flex-shrink-0 bg-white rounded-xl border border-slate-100 shadow-sm p-2 overflow-hidden">
                                         <Image
                                             src="/Images/logo-trimmed.png"
                                             alt="Official THUNDERNEX Trademark"
                                             fill
                                             unoptimized
                                             priority
-                                            className="object-contain p-1 transition-transform duration-300 group-hover:scale-105"
+                                            className="object-contain p-1 transition-transform duration-500 group-hover:scale-105"
                                             sizes="160px"
                                         />
                                     </div>
                                     <div className="text-center sm:text-left">
-                                        <span className="text-xs uppercase tracking-widest font-extrabold text-amber-500">
-                                            Official Trademark
-                                        </span>
+                                        <div className="flex items-center justify-center sm:justify-start gap-1.5">
+                                            <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
+                                            <span className="text-xs uppercase tracking-widest font-extrabold text-amber-600">
+                                                Official Trademark
+                                            </span>
+                                        </div>
                                         <p className="text-sm font-bold text-[#0a192f] mt-0.5">Engineered Lightning Safety Systems</p>
                                         <p className="text-xs text-slate-500 mt-1 leading-snug">
                                             Tested to CPRI, ISO, NABL, CE &amp; RoHS compliance standards.
@@ -195,10 +218,12 @@ export default function AboutUsPage() {
                             {/* Right — Vision & Mission cards */}
                             <div className="lg:col-span-5 flex flex-col gap-5">
 
-                                <div className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-[0_2px_16px_rgba(0,0,0,0.06)] hover:shadow-xl transition-all duration-300 flex items-start gap-5 group hover:-translate-y-1">
+                                <div className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-[0_2px_16px_rgba(0,0,0,0.06)] hover:shadow-2xl hover:border-amber-300/80 transition-all duration-300 flex items-start gap-5 group hover:-translate-y-1.5 cursor-default">
                                     <AnimatedVisionIcon />
                                     <div>
-                                        <h3 className="text-lg font-black text-[#0a192f] tracking-tight">Our Vision</h3>
+                                        <h3 className="text-lg font-black text-[#0a192f] tracking-tight group-hover:text-amber-600 transition-colors duration-200">
+                                            Our Vision
+                                        </h3>
                                         <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                                             To be the most trusted and innovative provider of lightning protection solutions
                                             across industrial, commercial, and critical infrastructure sectors globally.
@@ -206,10 +231,12 @@ export default function AboutUsPage() {
                                     </div>
                                 </div>
 
-                                <div className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-[0_2px_16px_rgba(0,0,0,0.06)] hover:shadow-xl transition-all duration-300 flex items-start gap-5 group hover:-translate-y-1">
+                                <div className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-[0_2px_16px_rgba(0,0,0,0.06)] hover:shadow-2xl hover:border-amber-300/80 transition-all duration-300 flex items-start gap-5 group hover:-translate-y-1.5 cursor-default">
                                     <AnimatedMissionIcon />
                                     <div>
-                                        <h3 className="text-lg font-black text-[#0a192f] tracking-tight">Our Mission</h3>
+                                        <h3 className="text-lg font-black text-[#0a192f] tracking-tight group-hover:text-amber-600 transition-colors duration-200">
+                                            Our Mission
+                                        </h3>
                                         <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                                             To deliver reliable, fully compliant and innovative lightning protection and monitoring
                                             products that enhance electrical safety and protect what matters most.
@@ -222,9 +249,9 @@ export default function AboutUsPage() {
                                     {["CPRI Tested", "ISO Certified", "NABL Accredited", "CE Marked", "RoHS Compliant"].map((badge) => (
                                         <span
                                             key={badge}
-                                            className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-700"
+                                            className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-700 transition-all duration-200 hover:bg-amber-50 hover:border-amber-300 hover:text-amber-800 hover:scale-105 cursor-default"
                                         >
-                                            <span className="w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0" />
+                                            <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse flex-shrink-0" />
                                             {badge}
                                         </span>
                                     ))}
@@ -243,9 +270,9 @@ export default function AboutUsPage() {
 
                         <div className="text-center mb-12 sm:mb-16">
                             <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-widest text-amber-500 uppercase mb-3">
-                                <span className="w-6 h-[2px] bg-amber-500 rounded-full" />
+                                <span className="w-6 h-[2px] bg-amber-500 rounded-full animate-pulse" />
                                 <span>Why THUNDERNEX</span>
-                                <span className="w-6 h-[2px] bg-amber-500 rounded-full" />
+                                <span className="w-6 h-[2px] bg-amber-500 rounded-full animate-pulse" />
                             </div>
                             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0a192f] tracking-tight">
                                 Built on Trust, Safety &amp; Engineering
@@ -280,11 +307,13 @@ export default function AboutUsPage() {
                             ].map(({ Icon, title, desc }) => (
                                 <div
                                     key={title}
-                                    className="bg-white rounded-2xl p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col gap-5"
+                                    className="bg-white rounded-2xl p-7 border border-slate-200 shadow-sm hover:shadow-2xl hover:border-amber-300/80 hover:-translate-y-2 transition-all duration-300 group flex flex-col gap-5 cursor-default"
                                 >
                                     <Icon />
                                     <div>
-                                        <h3 className="text-base font-bold text-[#0a192f]">{title}</h3>
+                                        <h3 className="text-base font-bold text-[#0a192f] group-hover:text-amber-600 transition-colors duration-200">
+                                            {title}
+                                        </h3>
                                         <p className="mt-2 text-sm text-slate-500 leading-relaxed">{desc}</p>
                                     </div>
                                 </div>
@@ -292,11 +321,6 @@ export default function AboutUsPage() {
                         </div>
                     </div>
                 </section>
-
-                {/* ══════════════════════════════════════════════
-                    5. INDUSTRIES SERVED — icon grid
-                ══════════════════════════════════════════════ */}
-
 
                 {/* ══════════════════════════════════════════════
                     6. CERTIFICATION MARQUEE
@@ -307,14 +331,15 @@ export default function AboutUsPage() {
                     7. CTA — dark navy
                 ══════════════════════════════════════════════ */}
                 <section className="relative w-full bg-[#051326] py-16 sm:py-20 text-center text-white overflow-hidden">
-                    {/* Decorative amber glow */}
-                    <div aria-hidden="true" className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-96 h-96 rounded-full bg-amber-500/5 blur-3xl" />
+                    {/* Decorative pulsing amber glow */}
+                    <div aria-hidden="true" className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div className="w-[32rem] h-[32rem] rounded-full bg-amber-500/10 blur-3xl animate-hero-glow" />
                     </div>
+
                     {/* Grid pattern */}
                     <div
                         aria-hidden="true"
-                        className="absolute inset-0 opacity-[0.03]"
+                        className="absolute inset-0 opacity-[0.03] pointer-events-none"
                         style={{
                             backgroundImage: "repeating-linear-gradient(0deg,#f59e0b 0,#f59e0b 1px,transparent 0,transparent 48px),repeating-linear-gradient(90deg,#f59e0b 0,#f59e0b 1px,transparent 0,transparent 48px)",
                         }}
@@ -322,9 +347,9 @@ export default function AboutUsPage() {
 
                     <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-amber-400 uppercase mb-4">
-                            <span className="w-5 h-[2px] bg-amber-400 rounded-full" />
+                            <span className="w-5 h-[2px] bg-amber-400 rounded-full animate-pulse" />
                             <span>Get In Touch</span>
-                            <span className="w-5 h-[2px] bg-amber-400 rounded-full" />
+                            <span className="w-5 h-[2px] bg-amber-400 rounded-full animate-pulse" />
                         </div>
                         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">
                             Ready to Protect Your Infrastructure?
@@ -336,16 +361,18 @@ export default function AboutUsPage() {
                         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
                             <Link
                                 href="/contactus"
-                                className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-8 py-3.5 text-sm font-bold text-gray-900 transition-all hover:bg-amber-400 hover:shadow-xl hover:shadow-amber-500/25 hover:-translate-y-0.5"
+                                className="group/btn relative inline-flex items-center gap-2.5 overflow-hidden rounded-full bg-amber-500 px-8 py-3.5 text-sm font-bold text-gray-900 transition-all duration-300 hover:bg-amber-400 hover:scale-105 active:scale-95 hover:shadow-2xl hover:shadow-amber-500/30"
                             >
-                                Request a Quote
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                {/* Light sweep shimmer on hover */}
+                                <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 ease-out group-hover/btn:translate-x-full" />
+                                <span className="relative">Request a Quote</span>
+                                <svg className="relative w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
                             </Link>
                             <Link
                                 href="/products"
-                                className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/12 hover:border-white/50 hover:-translate-y-0.5"
+                                className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/15 hover:border-amber-400/60 hover:text-amber-300 hover:scale-105 active:scale-95"
                             >
                                 Explore Products
                             </Link>

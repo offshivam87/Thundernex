@@ -5,21 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const productsData = [
-    {
-        id: "ese-lightning-arrester",
-        title: "ESE Lightning Arrester",
-        description:
-            "Advanced Early Streamer Emission (ESE) lightning arrester for wide-area protection.",
-        image: "/Images/ese-trimmed.png",
-        imageAlt: "THUNDERNEX ESE Lightning Arrester",
-        features: [
-            "Early Streamer Emission Technology",
-            "Larger Protection Radius",
-            "Robust & Corrosion-Resistant Design",
-        ],
-        detailsLink: "/products",
-        enquiryLink: "/contactus",
-    },
+
     {
         id: "digital-lightning-strike-counter",
         title: "Digital Lightning Strike Counter",
@@ -32,7 +18,23 @@ const productsData = [
             "6-Digit Digital Display",
             "Rugged & Weatherproof Enclosure",
         ],
-        detailsLink: "/products",
+        detailsLink: "/products/digital-strike-counter",
+        enquiryLink: "/contactus",
+    },
+    {
+        id: "safe-guard-ese-lightning-arrester",
+        title: "Safe-Guard ESE Lightning Arrester",
+        description:
+            "Advanced ESE lightning arrester wide-area structural protection.",
+        image: "/Images/safeguard-ese.png",
+        imageAlt: "THUNDERNEX Safe-Guard ESE Lightning Arrester",
+        features: [
+            "Early Streamer Emission (ESE) Technology",
+            "CPRI Tested & CE Compliant",
+            "Larger Protection Radius",
+            "Robust & Corrosion-Resistant Design",
+        ],
+        detailsLink: "/products/safeguard-ese-arrester",
         enquiryLink: "/contactus",
     },
     {
@@ -40,14 +42,14 @@ const productsData = [
         title: "Date & Time Lightning Strike Counter",
         description:
             "Advanced monitoring with real-time date, time and strike count.",
-        image: "/Images/DATE & TIME LIGHTNING STRIKE COUNTER.jpeg",
+        image: "/Images/DATE & TIME LIGHTNING STRIKE COUNTER.png",
         imageAlt: "THUNDERNEX Date and Time Lightning Strike Counter",
         features: [
             "Date & Time Logging",
             "Non-Volatile Data Storage",
             "Accurate & Tamper-Resistant",
         ],
-        detailsLink: "/products",
+        detailsLink: "/products/datetime-strike-counter",
         enquiryLink: "/contactus",
     },
 ];
@@ -94,8 +96,8 @@ export default function Products() {
                     {/* Tagline */}
                     <div
                         className={`inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-wider text-amber-500 uppercase mb-3 transition-all duration-700 ease-out delay-150 will-change-transform ${isVisible
-                                ? "opacity-100 translate-y-0"
-                                : "opacity-0 translate-y-6"
+                            ? "opacity-100 translate-y-0"
+                            : "opacity-0 translate-y-6"
                             }`}
                     >
                         <span className="w-5 h-[2px] bg-amber-500 inline-block rounded-full animate-pulse" />
@@ -105,8 +107,8 @@ export default function Products() {
                     {/* Heading */}
                     <h2
                         className={`text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#0a192f] leading-tight transition-all duration-700 ease-out delay-300 will-change-transform ${isVisible
-                                ? "opacity-100 translate-y-0"
-                                : "opacity-0 translate-y-6"
+                            ? "opacity-100 translate-y-0"
+                            : "opacity-0 translate-y-6"
                             }`}
                     >
                         Explore Our{" "}
@@ -119,8 +121,8 @@ export default function Products() {
                     {/* Subtitle */}
                     <p
                         className={`mt-3 text-sm sm:text-base text-slate-600 leading-relaxed transition-all duration-700 ease-out delay-450 will-change-transform ${isVisible
-                                ? "opacity-100 translate-y-0"
-                                : "opacity-0 translate-y-6"
+                            ? "opacity-100 translate-y-0"
+                            : "opacity-0 translate-y-6"
                             }`}
                     >
                         Reliable products engineered to support modern lightning protection
@@ -231,8 +233,8 @@ export default function Products() {
                 {/* Bottom View All CTA with in-view entrance */}
                 <div
                     className={`mt-12 sm:mt-14 flex items-center justify-center transition-all duration-700 ease-out delay-[950ms] will-change-transform ${isVisible
-                            ? "opacity-100 translate-y-0"
-                            : "opacity-0 translate-y-6"
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-6"
                         }`}
                 >
                     <Link

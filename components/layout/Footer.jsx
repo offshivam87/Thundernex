@@ -33,46 +33,7 @@ export default function Footer() {
             </p>
 
             {/* Social Icons */}
-            <div className="mt-6 flex items-center gap-3">
-              {/* LinkedIn */}
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="THUNDERNEX on LinkedIn"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-amber-500 hover:text-slate-950 text-white flex items-center justify-center transition-all duration-200 border border-white/10"
-              >
-                <svg className="w-4 h-4 fill-currentColor" viewBox="0 0 24 24">
-                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.4 9.74V10.13H5.06v8.37h2.8z" />
-                </svg>
-              </a>
 
-              {/* Twitter / X */}
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="THUNDERNEX on Twitter"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-amber-500 hover:text-slate-950 text-white flex items-center justify-center transition-all duration-200 border border-white/10"
-              >
-                <svg className="w-3.5 h-3.5 fill-currentColor" viewBox="0 0 24 24">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-
-              {/* YouTube */}
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="THUNDERNEX on YouTube"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-amber-500 hover:text-slate-950 text-white flex items-center justify-center transition-all duration-200 border border-white/10"
-              >
-                <svg className="w-4 h-4 fill-currentColor" viewBox="0 0 24 24">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                </svg>
-              </a>
-            </div>
           </div>
 
           {/* Column 2: Quick Links */}
@@ -97,28 +58,21 @@ export default function Footer() {
                   About Us
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/applications"
-                  className="hover:text-amber-400 transition-colors duration-200"
-                >
-                  Applications
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/resources"
-                  className="hover:text-amber-400 transition-colors duration-200"
-                >
-                  Resources
-                </Link>
-              </li>
+
               <li>
                 <Link
                   href="/contact"
                   className="hover:text-amber-400 transition-colors duration-200"
                 >
                   Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/products"
+                  className="hover:text-amber-400 transition-colors duration-200"
+                >
+                  Products
                 </Link>
               </li>
             </ul>
@@ -140,7 +94,15 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/products/digital-lightning-strike-counter"
+                  href="/products/safeguard-ese-arrester"
+                  className="hover:text-amber-400 transition-colors duration-200"
+                >
+                  SAFE-GUARD ESE Arrester
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/products/digital-strike-counter"
                   className="hover:text-amber-400 transition-colors duration-200"
                 >
                   Digital Lightning Strike Counter
@@ -148,18 +110,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/products/datetime-lightning-strike-counter"
+                  href="/products/datetime-strike-counter"
                   className="hover:text-amber-400 transition-colors duration-200"
                 >
                   Date &amp; Time Lightning Strike Counter
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products/accessories"
-                  className="hover:text-amber-400 transition-colors duration-200"
-                >
-                  Accessories
                 </Link>
               </li>
             </ul>
@@ -187,10 +141,10 @@ export default function Footer() {
                   />
                 </svg>
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919140073153"
                   className="hover:text-amber-400 transition-colors duration-200"
                 >
-                  +91 98765 43210
+                  +91-9140073153
                 </a>
               </li>
 
@@ -213,7 +167,7 @@ export default function Footer() {
                   href="mailto:sales@thundernex.com"
                   className="hover:text-amber-400 transition-colors duration-200 break-all"
                 >
-                  sales@thundernex.com
+                  info@thundernex.com
                 </a>
               </li>
 

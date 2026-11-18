@@ -132,11 +132,10 @@ export default function About({
 
                     {/* Left Column: Visual Showcase Image with in-view entrance animation */}
                     <div
-                        className={`lg:col-span-6 relative transition-all duration-1000 ease-out will-change-transform ${
-                            isVisible
-                                ? "opacity-100 translate-x-0 scale-100"
-                                : "opacity-0 -translate-x-8 sm:-translate-x-12 scale-95"
-                        }`}
+                        className={`lg:col-span-6 relative transition-all duration-1000 ease-out will-change-transform ${isVisible
+                            ? "opacity-100 translate-x-0 scale-100"
+                            : "opacity-0 -translate-x-8 sm:-translate-x-12 scale-95"
+                            }`}
                     >
                         <div className="relative w-full overflow-hidden rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl border border-slate-100 group">
                             <div className="relative aspect-[16/10] sm:aspect-[4/3] lg:aspect-[16/11] w-full bg-slate-100">
@@ -154,11 +153,10 @@ export default function About({
                             {/* Floating ESE Lightning Arrester Product Badge with pop-in animation */}
                             {productBadgeSrc && (
                                 <div
-                                    className={`absolute bottom-3 right-3 sm:bottom-4 sm:right-4 bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-lg border border-slate-100/90 flex items-center gap-2.5 max-w-[200px] sm:max-w-[220px] transition-all duration-700 ease-out delay-500 hover:scale-105 hover:shadow-xl ${
-                                        isVisible
-                                            ? "opacity-100 translate-y-0 scale-100"
-                                            : "opacity-0 translate-y-6 scale-90"
-                                    }`}
+                                    className={`absolute bottom-3 right-3 sm:bottom-4 sm:right-4 bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-lg border border-slate-100/90 flex items-center gap-2.5 max-w-[200px] sm:max-w-[220px] transition-all duration-700 ease-out delay-500 hover:scale-105 hover:shadow-xl ${isVisible
+                                        ? "opacity-100 translate-y-0 scale-100"
+                                        : "opacity-0 translate-y-6 scale-90"
+                                        }`}
                                 >
                                     <span className="relative flex h-2.5 w-2.5 flex-shrink-0">
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />
@@ -181,11 +179,10 @@ export default function About({
                     <div className="lg:col-span-6 flex flex-col text-left">
                         {/* Tagline / Category indicator with pulsing dash */}
                         <div
-                            className={`flex items-center gap-2 text-xs sm:text-sm font-bold tracking-wider text-amber-500 uppercase transition-all duration-700 ease-out delay-150 will-change-transform ${
-                                isVisible
-                                    ? "opacity-100 translate-y-0"
-                                    : "opacity-0 translate-y-6"
-                            }`}
+                            className={`flex items-center gap-2 text-xs sm:text-sm font-bold tracking-wider text-amber-500 uppercase transition-all duration-700 ease-out delay-150 will-change-transform ${isVisible
+                                ? "opacity-100 translate-y-0"
+                                : "opacity-0 translate-y-6"
+                                }`}
                         >
                             <span className="w-5 h-[2px] bg-amber-500 inline-block rounded-full animate-pulse" />
                             <span>ABOUT THUNDERNEX</span>
@@ -193,11 +190,10 @@ export default function About({
 
                         {/* Main Headline with gradient accent */}
                         <h2
-                            className={`mt-3.5 text-2xl sm:text-3xl lg:text-[2.25rem] xl:text-[2.5rem] font-black tracking-tight text-[#0a192f] leading-[1.2] transition-all duration-700 ease-out delay-300 will-change-transform ${
-                                isVisible
-                                    ? "opacity-100 translate-y-0"
-                                    : "opacity-0 translate-y-6"
-                            }`}
+                            className={`mt-3.5 text-2xl sm:text-3xl lg:text-[2.25rem] xl:text-[2.5rem] font-black tracking-tight text-[#0a192f] leading-[1.2] transition-all duration-700 ease-out delay-300 will-change-transform ${isVisible
+                                ? "opacity-100 translate-y-0"
+                                : "opacity-0 translate-y-6"
+                                }`}
                         >
                             Powering a Safer Tomorrow Through{" "}
                             <span className="bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 bg-clip-text text-transparent font-black inline-block">
@@ -207,11 +203,10 @@ export default function About({
 
                         {/* Subtitle Description */}
                         <p
-                            className={`mt-4 text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl font-normal transition-all duration-700 ease-out delay-450 will-change-transform ${
-                                isVisible
-                                    ? "opacity-100 translate-y-0"
-                                    : "opacity-0 translate-y-6"
-                            }`}
+                            className={`mt-4 text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl font-normal transition-all duration-700 ease-out delay-450 will-change-transform ${isVisible
+                                ? "opacity-100 translate-y-0"
+                                : "opacity-0 translate-y-6"
+                                }`}
                         >
                             Backed by the vision of RB Earthing Private Limited, THUNDERNEX™ emphasizes product reliability, quality-conscious manufacturing, and application-specific technical requirements. We believe that effective lightning protection depends on suitable product selection, proper installation, and an appropriately designed earthing system.
                         </p>
@@ -224,11 +219,10 @@ export default function About({
                                 return (
                                     <div
                                         key={feature.id}
-                                        className={`group/feat flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3 p-2 rounded-xl transition-all duration-700 ease-out ${delays[index] || "delay-500"} hover:bg-amber-50/60 cursor-default will-change-transform ${
-                                            isVisible
-                                                ? "opacity-100 translate-y-0"
-                                                : "opacity-0 translate-y-6"
-                                        }`}
+                                        className={`group/feat flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3 p-2 rounded-xl transition-all duration-700 ease-out ${delays[index] || "delay-500"} hover:bg-amber-50/60 cursor-default will-change-transform ${isVisible
+                                            ? "opacity-100 translate-y-0"
+                                            : "opacity-0 translate-y-6"
+                                            }`}
                                     >
                                         <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center flex-shrink-0 text-amber-500 transition-all duration-300 group-hover/feat:bg-amber-500 group-hover/feat:text-white group-hover/feat:scale-110 group-hover/feat:shadow-md group-hover/feat:shadow-amber-500/25">
                                             <IconComponent className={`w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-500 ${feature.iconAnim}`} />
@@ -248,20 +242,19 @@ export default function About({
 
                         {/* CTA Button with slide-up entrance and hover sheen */}
                         <div
-                            className={`mt-8 sm:mt-10 transition-all duration-700 ease-out delay-[850ms] will-change-transform ${
-                                isVisible
-                                    ? "opacity-100 translate-y-0"
-                                    : "opacity-0 translate-y-6"
-                            }`}
+                            className={`mt-8 sm:mt-10 transition-all duration-700 ease-out delay-[850ms] will-change-transform ${isVisible
+                                ? "opacity-100 translate-y-0"
+                                : "opacity-0 translate-y-6"
+                                }`}
                         >
                             <Link
-                                href="/aboutus"
+                                href="/products/ese-lightning-arrester"
                                 className="group/btn relative inline-flex items-center justify-center gap-2.5 overflow-hidden rounded-xl bg-[#051326] px-6 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-bold text-white shadow-md border border-[#051326] transition-all duration-300 hover:bg-[#0c2340] hover:scale-105 hover:shadow-xl hover:shadow-[#051326]/20 active:scale-95 w-fit"
                             >
                                 {/* Light sweep shimmer on hover */}
                                 <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 ease-out group-hover/btn:translate-x-full" />
 
-                                <span className="relative">Know More About Us</span>
+                                <span className="relative">View More</span>
                                 <svg
                                     className="relative w-4 h-4 text-amber-400 transition-transform duration-300 group-hover/btn:translate-x-1.5"
                                     fill="none"

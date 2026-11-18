@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -12,9 +13,18 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const isLinkActive = (href) => {
+    if (!pathname) return false;
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -87,42 +97,50 @@ export default function Navbar() {
 
           {/* Desktop nav links */}
           <div className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="relative px-3 py-2 text-sm font-medium text-gray-200 transition-colors hover:text-amber-400 group"
-              >
-                <span className="flex items-center gap-1">
-                  {link.name}
-                  {link.hasDropdown && (
-                    <svg
-                      className="w-3.5 h-3.5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
+            {navLinks.map((link) => {
+              const active = isLinkActive(link.href);
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`relative px-3.5 py-2 text-sm font-medium transition-colors group ${active
+                      ? "text-amber-400 font-semibold"
+                      : "text-gray-200 hover:text-amber-400"
+                    }`}
+                >
+                  <span className="flex items-center gap-1">
+                    {link.name}
+                    {link.hasDropdown && (
+                      <svg
+                        className="w-3.5 h-3.5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    )}
+                  </span>
+                  {/* Active underline indicator */}
+                  {active && (
+                    <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-amber-500 rounded-full shadow-[0_0_8px_rgba(245,158,11,0.7)]" />
                   )}
-                </span>
-                {/* Active underline for Home */}
-                {link.name === "Home" && (
-                  <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-amber-500 rounded-full" />
-                )}
-              </Link>
-            ))}
+                </Link>
+              );
+            })}
           </div>
 
           {/* CTA Button - Desktop */}
           <div className="hidden lg:block">
             <Link
-              href="/contact"
+              href="https://wa.me/919140073153?text=Hello%2C%20I%20would%20like%20to%20get%20a%20quote."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-5 py-2.5 text-sm font-semibold text-gray-900 transition-all hover:bg-amber-400 hover:shadow-lg hover:shadow-amber-500/25"
             >
               Get a Quote
@@ -188,37 +206,63 @@ export default function Navbar() {
           }`}
       >
         <div className="bg-[#051326]/95 backdrop-blur-md border-t border-white/10 px-4 pb-4 pt-2 space-y-1">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium text-gray-200 hover:bg-white/10 hover:text-amber-400 transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              {link.name}
-              {link.hasDropdown && (
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              )}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const active = isLinkActive(link.href);
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={`flex items-center justify-between rounded-lg px-3.5 py-2.5 text-sm transition-all duration-200 ${active
+                    ? "bg-amber-500/15 text-amber-400 font-semibold border-l-4 border-amber-500"
+                    : "text-gray-200 hover:bg-white/10 hover:text-amber-400 border-l-4 border-transparent"
+                  }`}
+                onClick={() => setMobileOpen(false)}
+              >
+                <span className="flex items-center gap-2">
+                  {active && (
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                  )}
+                  <span>{link.name}</span>
+                </span>
+                {link.hasDropdown && (
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                )}
+              </Link>
+            );
+          })}
           <Link
-            href="/contact"
+            href="https://wa.me/919140073153?text=Hello%2C%20I%20would%20like%20to%20get%20a%20quote."
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-2 flex items-center justify-center gap-2 rounded-full bg-amber-500 px-5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-amber-400 transition-colors"
             onClick={() => setMobileOpen(false)}
           >
             Get a Quote
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
           </Link>
         </div>
       </div>

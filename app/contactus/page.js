@@ -1,16 +1,28 @@
-"use client";
-
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ContactForm from "@/components/ContactForm";
+
+export const metadata = {
+    title: 'Contact Us | Thundernex - Lightning Protection Enquiries',
+    description: 'Get in touch with Thundernex, a specialized brand of RB Earthing Private Limited, for ESE Lightning Arrester enquiries, technical documentation, and business opportunities.',
+    keywords: 'Contact Thundernex, RB Earthing Private Limited, Lightning Protection Enquiries, ESE Lightning Arrester Support, info@thundernex.com',
+    openGraph: {
+        title: 'Contact Us | Thundernex - Lightning Protection Enquiries',
+        description: 'Connect with our team for product enquiries, technical documentation, and business opportunities regarding ESE Lightning Arresters and protection systems.',
+        url: 'https://www.thundernex.com/contactus',
+        siteName: 'Thundernex',
+        locale: 'en_US',
+        type: 'website',
+    },
+}
 
 /* ─────────────────────────── Contact Details ─────────────────────────── */
 
 const CONTACT_INFO = [
     {
         label: "Phone",
-        value: "+91 98765 43210",
+        value: "+91 9140073153",
         subValue: "Mon – Sat, 9 AM – 6 PM IST",
         href: "tel:+919876543210",
         icon: (
@@ -21,38 +33,38 @@ const CONTACT_INFO = [
     },
     {
         label: "Email",
-        value: "sales@thundernex.com",
+        value: "info@thundernex.com",
         subValue: "We reply within 24 business hours",
-        href: "mailto:sales@thundernex.com",
+        href: "mailto:info@thundernex.com",
         icon: (
             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
         ),
     },
-    {
-        label: "Office Address",
-        value: "RB Earthing Private Limited",
-        subValue: "[Full Address], India",
-        href: "https://maps.google.com",
-        icon: (
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-        ),
-    },
-    {
-        label: "Support",
-        value: "support@thundernex.com",
-        subValue: "Technical & After-Sales Support",
-        href: "mailto:support@thundernex.com",
-        icon: (
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
-        ),
-    },
+    // {
+    //     label: "Office Address",
+    //     value: "RB Earthing Private Limited",
+    //     subValue: "[Full Address], India",
+    //     href: "https://maps.google.com",
+    //     icon: (
+    //         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+    //             <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+    //             <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+    //         </svg>
+    //     ),
+    // },
+    // {
+    //     label: "Support",
+    //     value: "support@thundernex.com",
+    //     subValue: "Technical & After-Sales Support",
+    //     href: "mailto:support@thundernex.com",
+    //     icon: (
+    //         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+    //             <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+    //         </svg>
+    //     ),
+    // },
 ];
 
 const ENQUIRY_TYPES = [
@@ -74,7 +86,7 @@ const ENQUIRY_TYPES = [
 export default function ContactUsPage() {
     return (
         <div className="min-h-screen flex flex-col bg-white">
-            <Navbar />
+
 
             <main className="flex-grow">
 
@@ -188,7 +200,7 @@ export default function ContactUsPage() {
                             </div>
 
                             {/* Social links */}
-                            <div className="rounded-2xl border border-slate-200 bg-white shadow-sm p-5">
+                            {/* <div className="rounded-2xl border border-slate-200 bg-white shadow-sm p-5">
                                 <h3 className="text-sm font-bold text-[#0a192f] mb-3">Follow Us</h3>
                                 <div className="flex gap-3">
                                     {[
@@ -226,7 +238,7 @@ export default function ContactUsPage() {
                                         </a>
                                     ))}
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
 
                         {/* ── RIGHT: Contact Form ── */}

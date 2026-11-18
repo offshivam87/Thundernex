@@ -104,7 +104,7 @@ export default function HeroSection() {
 
                             {/* Secondary Button: Glassmorphism + scale + rotating icon on hover */}
                             <Link
-                                href="/contact"
+                                href="/contactus"
                                 className="group relative inline-flex w-fit items-center gap-2.5 rounded-full border-2 border-white/30 bg-white/5 px-6 py-2.5 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/15 hover:border-amber-400/70 hover:text-amber-300 hover:shadow-[0_0_25px_rgba(255,255,255,0.15)] active:scale-95 md:px-7 md:py-3"
                             >
                                 <svg

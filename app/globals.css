@@ -122,6 +122,20 @@ html {
   animation: heroGlowPulse 7s ease-in-out infinite;
 }
 
+@keyframes loaderProgress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(250%);
+  }
+}
+
+.animate-loader-bar {
+  will-change: transform;
+  animation: loaderProgress 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee {
     animation-play-state: paused;
@@ -131,7 +145,8 @@ html {
   .animate-hero-title,
   .animate-hero-desc,
   .animate-hero-cta,
-  .animate-hero-glow {
+  .animate-hero-glow,
+  .animate-loader-bar {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
